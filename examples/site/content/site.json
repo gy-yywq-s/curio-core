@@ -1,0 +1,6 @@
+{
+  "contactEmail": "someone@example.com",
+  "contactLine": "Write to {email}.",
+  "categories": ["notes", "notes / fieldwork"],
+  "tabs": ["notes"]
+}

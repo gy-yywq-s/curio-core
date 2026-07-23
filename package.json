@@ -1,0 +1,54 @@
+{
+  "name": "curio-core",
+  "version": "0.1.0",
+  "description": "The workings of a small personal writing site, without its design: entries, folders, tags, pictures, videos, private entries, history, imports, a dashboard API, and three ways to keep it all (a folder on disk, Postgres + Supabase Storage, or a folder of files in Git).",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": { "node": ">=22" },
+  "exports": {
+    ".": "./src/model.ts",
+    "./read": "./src/read.ts",
+    "./client": "./src/client.ts",
+    "./react": "./src/react/body.tsx",
+    "./server": "./src/server/index.mjs",
+    "./next/config": "./src/next/config.mjs",
+    "./next/dash": "./src/next/dash.ts",
+    "./next/media": "./src/next/media.ts",
+    "./next/reader": "./src/next/reader.ts"
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit -p .",
+    "example": "pnpm --filter curio-example dev",
+    "example:files": "pnpm --filter curio-example dev:files"
+  },
+  "dependencies": {
+    "jose": "^6.2.3",
+    "js-yaml": "^5.2.1",
+    "katex": "^0.17.0",
+    "postgres": "3.4.7",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "peerDependencies": {
+    "next": ">=16",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "next": { "optional": true },
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.16",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,13 @@
+/* Deliberately plain: this example shows the pages, not a design. */
+:root { --ink: #222; --muted: #777; --line: #ddd; --link: #2a6fb0; --sans: system-ui, sans-serif; --serif: Georgia, serif; --mono: ui-monospace, monospace; }
+body { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: var(--ink); font: 1rem/1.6 var(--sans); }
+a { color: var(--link); }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+.meta, .muted { color: var(--muted); font-size: .85rem; }
+img, video { max-width: 100%; height: auto; }
+.entry-picture { display: block; margin: 1rem 0; }
+.entry-picture-caption { display: block; color: var(--muted); font-size: .85rem; }
+ul.list { padding: 0; list-style: none; }
+ul.list li { padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1rem; }
+footer { margin-top: 4rem; border-top: 1px solid var(--line); padding-top: 1rem; }

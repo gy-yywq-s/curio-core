@@ -1,0 +1,24 @@
+{
+  "name": "curio-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "CURIO_DATA_DIR=.curio-data DASH_AUTH_BYPASS=true next dev --hostname 127.0.0.1",
+    "dev:files": "CURIO_CONTENT_DIR=content next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "curio-core": "workspace:*",
+    "katex": "^0.17.0",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}
